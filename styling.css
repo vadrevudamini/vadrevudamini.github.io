@@ -1,0 +1,208 @@
+/* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #6fb8ed; /* Updated header background color */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 0 10px;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.profile-banner {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align the items horizontally */
+    padding: 20px; /* Padding around the entire banner */
+    background-color: #ffffff; /* Blue background of the banner */
+}
+
+.titles {
+    font-size: 18px; /* Increases font size for visibility */
+    margin-bottom: 50px; /* Space between titles and icons */
+    text-align: center; /* Center-align the text */
+    color: #555;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centers icons horizontally */
+    align-items: center; /* Centers icons vertically */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Controls spacing between icons */
+}
+
+.social-icons img {
+    width: 50px; /* Sets a specific size for the icons */
+    height: 50px;
+    display: block; /* Ensures images are treated as block elements for better control */
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.skills-section div {
+    width: 48%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skills-section h2 {
+    text-align: center;
+    background-color: #6fb8ed;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-section ul li {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.skills-section ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.skills-section ul li:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+form input, form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* New introduction section styles */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background-color: #ffffff; /* Light background for contrast */
+}
+
+.intro-content {
+    max-width: 600px;
+}
+
+.intro-content h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.intro-content .role {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 0.5em;
+}
+
+.intro-content .bio {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Rounded corners for the button */
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.intro-image {
+    flex-shrink: 0;
+}
+
+.intro-image img {
+    width: 200px; /* Adjust based on your needs */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image img {
+        margin-bottom: 20px;
+    }
+}
