@@ -1,6 +1,6 @@
 /* Existing styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -9,10 +9,11 @@ body {
 }
 
 header {
-    background: #6fb8ed; /* Updated header background color */
+    background: linear-gradient(90deg, #6fb8ed, #3a7bd5); /* Gradient background */
     color: #fff;
     padding: 10px 20px;
     text-align: center;
+    font-size: 18px;
 }
 
 header nav ul {
@@ -22,50 +23,136 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    margin-right: 50px;
+    margin-right: 20px; /* Adjusted for better spacing */
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Underline effect on hover */
 }
 
 section {
     padding: 20px;
-    margin: 0 10px;
-    background: white;
+    margin: 20px 10px; /* Adjusted for more space */
+    background: linear-gradient(90 deg, #097af4, #6cc6fe);
     border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    border-radius: 10px; /* Rounded corners */
 }
 
 .profile-banner {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center align the items horizontally */
-    padding: 20px; /* Padding around the entire banner */
-    background-color: #ffffff; /* Blue background of the banner */
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 0px; /* Added margin to separate from the contact button */
+    margin-bottom: 20px;
 }
 
 .titles {
-    font-size: 18px; /* Increases font size for visibility */
-    margin-bottom: 50px; /* Space between titles and icons */
-    text-align: center; /* Center-align the text */
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
     color: #555;
 }
 
 .social-icons {
     display: flex;
-    justify-content: center; /* Centers icons horizontally */
-    align-items: center; /* Centers icons vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .social-icons a {
-    margin: 0 10px; /* Controls spacing between icons */
+    margin: 0 10px;
 }
 
 .social-icons img {
-    width: 50px; /* Sets a specific size for the icons */
-    height: 50px;
-    display: block; /* Ensures images are treated as block elements for better control */
+    width: 40px; /* Adjusted size */
+    height: 40px;
+    display: block;
+    border-radius: 50%; /* Circular icons */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* New introduction section styles */
+
+
+.intro-content {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-content h1 {
+    color: #333;
+    font-size: 2.5em;
+}
+
+.intro-content .role {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+.contact-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Rounded corners for the button */
+    transition: background-color 0.3s;
+    margin-bottom: 20px; /* Space below the button */
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.intro-image {
+    flex-shrink: 0;
+}
+.intro-image img {
+    width: 200px; /* Adjust based on your needs */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+section .about{
+   display: flex; 
+   background: white;
+}
+
+.timeline img{
+    width: 1200px; /* Adjust based on your needs */
+    height: 800px;
+    ;
+    
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image img {
+        margin-bottom: 20px;
+    }
 }
 
 .skills-section {
@@ -78,7 +165,8 @@ section {
     width: 48%;
     background: #fff;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 .skills-section h2 {
@@ -87,6 +175,7 @@ section {
     color: #fff;
     padding: 10px 0;
     margin: 0;
+    border-radius: 10px;
 }
 
 .skills-section ul {
@@ -126,18 +215,50 @@ footer {
     width: 100%;
 }
 
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 form input, form textarea {
-    width: calc(100% - 22px);
+    width: 100%;
     padding: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
 }
 
 form button {
-    padding: 10px 20px;
-    background: #333;
+    width: 100%;
+    padding: 15px 20px;
+    background: #007BFF;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1.2em;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 /* New introduction section styles */
@@ -146,7 +267,7 @@ form button {
     align-items: center;
     justify-content: space-around;
     padding: 50px 10%;
-    background-color: #ffffff; /* Light background for contrast */
+    background: url('C:/Users/vadre/OneDrive/Desktop/portfolio/images/bg.jpg') /* Light background for contrast */
 }
 
 .intro-content {
@@ -156,20 +277,14 @@ form button {
 .intro-content h1 {
     color: #333;
     font-size: 2.5em;
-    margin-bottom: 0.5em;
 }
 
 .intro-content .role {
     font-size: 1.2em;
     color: #555;
-    margin-bottom: 0.5em;
 }
 
-.intro-content .bio {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1em;
-}
+
 
 .contact-btn {
     padding: 10px 20px;
@@ -187,7 +302,6 @@ form button {
 .intro-image {
     flex-shrink: 0;
 }
-
 .intro-image img {
     width: 200px; /* Adjust based on your needs */
     height: 200px; /* Maintain aspect ratio */
@@ -205,4 +319,86 @@ form button {
     .intro-image img {
         margin-bottom: 20px;
     }
+}
+/* Styling for the new Python projects page */
+
+#python-projects {
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    margin: 20px 10px;
+}
+
+#python-projects h2 {
+    text-align: center;
+    background-color: #6fb8ed;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#python-projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#python-projects ul li {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#python-projects ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#python-projects ul li:hover {
+    background-color: #0056b3;
+}
+* Styling for the new Stats projects page */
+
+#stats-projects {
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    margin: 20px 10px;
+}
+
+#stats-projects h2 {
+    text-align: center;
+    background-color: #6fb8ed;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#stats-projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#stats-projects ul li {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#stats-projects ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#stats-projects ul li:hover {
+    background-color: #0056b3;
 }
