@@ -62,7 +62,7 @@ section {
     font-size: 18px;
     margin-bottom: 20px;
     text-align: center;
-    color: #555;
+    color: #fff;
 }
 
 .social-icons {
@@ -100,13 +100,13 @@ section {
 }
 
 .intro-content h1 {
-    color: #333;
+    color: #fff;
     font-size: 2.5em;
 }
 
 .intro-content .role {
     font-size: 1.2em;
-    color: #555;
+    color: #fff;
 }
 
 
@@ -278,13 +278,13 @@ form button:hover {
 }
 
 .intro-content h1 {
-    color: #333;
+    color: #fff;
     font-size: 2.5em;
 }
 
 .intro-content .role {
     font-size: 1.2em;
-    color: #555;
+    color: #fff;
 }
 
 
