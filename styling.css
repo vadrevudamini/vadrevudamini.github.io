@@ -4,7 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-image: url("images/hex-textures-networking.jpg");
+    background-size: cover;
     color: #333;
 }
 
@@ -39,8 +40,7 @@ header nav ul li a:hover {
 section {
     padding: 20px;
     margin: 20px 10px; /* Adjusted for more space */
-    background-image: url("images/hex-textures-networking.jpg");
-    background-size: cover;
+    background: linear-gradient(90 deg, #097af4, #6cc6fe);
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
     border-radius: 10px; /* Rounded corners */
