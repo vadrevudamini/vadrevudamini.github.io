@@ -95,6 +95,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("images/hex-textures-networking.jpg");
+    background-size: cover;
 }
 
 .intro-content h1 {
