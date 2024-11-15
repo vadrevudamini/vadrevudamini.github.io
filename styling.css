@@ -137,6 +137,7 @@ section {
 section .about{
    display: flex; 
    background: white;
+   color: #000000;
 }
 
 .timeline img{
