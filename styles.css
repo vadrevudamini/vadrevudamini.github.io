@@ -1,0 +1,467 @@
+/* === General Styles === */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* === About Me Section Styling === */
+.about-container {
+    width: 85%; /* Make it wider */
+    max-width: 1200px; /* Prevent it from being too large on big screens */
+    background: rgba(255, 240, 245, 0.8); /* Light pinkish shade */
+    border-radius: 15px; /* Smooth corners */
+    padding: 25px 40px; /* Reduce height */
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 50px auto 20px auto; /* Moves it lower */
+}
+
+/* About Me Heading */
+.about-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* About Me Text */
+.about-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #333; /* Darker text for readability */
+}
+
+/* Animation (Slide Up on Scroll) */
+.about-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* === Hero Section with Background Image === */
+.hero {
+    background: url("C:/Users/vadre/OneDrive/Desktop/Github_Portfolio/portfolio-images/Home.png") center/cover no-repeat; /* Add your image */
+    position: relative;
+    text-align: center;
+    padding: 60px 20px; /* Adjust padding for balance */
+    color: black;
+    overflow: hidden;
+}
+
+/* Overlay to Ensure Readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(216, 191, 216, 0.7); /* Semi-transparent thistle overlay */
+    backdrop-filter: blur(1.7px); /* Adds subtle blur */
+    z-index: 1;
+}
+
+/* Hero Content - Keep Text Above Overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Name & Subtitle - Make Sure They're Visible */
+/* === Name Animation (Fade-In & Slide-Up) === */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(30px);  /* Moves text down initially */
+    animation: fadeSlideUp 1.5s ease-out forwards;
+}
+
+/* Keyframes for the animation */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+}
+/* === Achievements (Perfectly Centered, No Text Cutoff) === */
+/* === Achievements (Finally Perfect Alignment) === */
+.achievements {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures all items stay in a single row */
+    justify-content: flex-start; /* Ensures smooth scrolling from start */
+    gap: 15px;
+    margin-top: 10px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.4); /* Light transparent white for contrast */
+    border-radius: 15px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(150, 100, 180, 0.3);
+    overflow-x: auto;
+    white-space: nowrap; /* Prevents text wrapping */
+    max-width: 1100px; /* Keeps from stretching too far */
+    margin: 0 auto; /* FULLY centers the container */
+    padding-bottom: 12px; /* Prevents scrollbar from overlapping */
+    scrollbar-gutter: stable both-edges; /* Prevents shifting */
+}
+
+/* === Individual Achievement Items (Text is Now Visible) === */
+.achievement-item {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: rgba(200, 162, 200, 0.8); /* Darker thistle */
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: black;
+    text-shadow: none; /* Keep text crisp */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: fit-content; /* **Ensures text is NEVER cut off** */
+}
+
+/* === Scrollbar Fix (Now Clean & Smooth) === */
+.achievements::-webkit-scrollbar {
+    height: 8px; /* Slightly thicker for visibility */
+}
+
+.achievements::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.achievements::-webkit-scrollbar-thumb {
+    background: rgba(255, 120, 150, 0.8);
+    border-radius: 10px;
+}
+
+.achievements::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 120, 150, 1);
+}
+
+
+/* === Contact Buttons (More Readable) === */
+.contact-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background: white;
+    color: #ff758c;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+
+/* === Sections === */
+section {
+    background: white;
+    padding: 50px 10%;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* === Animated Glow Effect === */
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(255, 120, 150, 0.4);
+}
+
+/* === Timeline Styles === */
+/* === Timeline Container === */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* === Timeline Vertical Line (Centered and Clean) === */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px; /* Perfectly centered */
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+    z-index: -1; /* Keep it behind */
+}
+
+/* === Timeline Items (Properly Spaced & Aligned) === */
+.timeline-item {
+    background: white;
+    padding: 20px;
+    border-left: 6px solid #ff758c;
+    margin: 40px 0; /* Proper spacing */
+    position: relative;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: 60px; /* Keep it aligned */
+    opacity: 0;  
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+}
+
+/* === Timeline Items Appear Animation === */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* === Hover Effects on Timeline Items === */
+.timeline-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(255, 120, 150, 0.3);
+}
+
+
+
+
+/* === Volunteering Section Enhancements === */
+#volunteering li {
+    background: #ffebee;
+    padding: 12px;
+    border-left: 4px solid #ff758c;
+    text-align: left;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#volunteering li:hover {
+    transform: scale(1.05);
+}
+
+/* === Footer === */
+footer {
+    background: #ff758c;
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+/* === Education Section Styling === */
+.education-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+    flex-wrap: wrap; /* Responsive for smaller screens */
+}
+
+/* Individual Education Card */
+.education-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 40%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent; /* Initial transparent border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    position: relative;
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0; /* Hidden initially for fade-in effect */
+}
+
+/* Glowing Gradient Border */
+.education-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ff758c, #d8bfd8, #ff9a9e);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.education-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Glow effect on hover */
+.education-card:hover::before {
+    opacity: 1;
+}
+
+/* Degree Title */
+.degree {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* University Name */
+.university {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444;
+    margin-top: 5px;
+}
+
+/* Date */
+.date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Icons */
+.education-card i {
+    font-size: 2rem;
+    color: #ff758c;
+    margin-bottom: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* University Logo Styling */
+.university-logo {
+    height: 30px; /* Adjust size */
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* === Skills Section Styling === */
+/* === Skills Section (Enhanced) === */
+.skills-section {
+    text-align: center;
+    padding: 50px 30px;
+    margin-top: -20px;
+    width: 100vw;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Soft pink gradient */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+.skills-section h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Subtitle */
+.skills-section p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Skill Item */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #222;
+    transition: transform 0.3s ease-in-out;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill Icons */
+.skill-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.skill-item img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
